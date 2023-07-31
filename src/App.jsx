@@ -4,17 +4,17 @@ import Today from "./pages/Today"
 import Login from "./pages/Login"
 import History from "./pages/History"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { HabitsFinished, Usuario } from "./resources/context"
+import { Usuario } from "./resources/context"
 import { useState } from "react"
 
 export default function App() {
 
   const [usuario, setUsuario] = useState({});
-  const [habitsFinished, setHabitsFinished] = useState(0);
+  //const [habitsFinished, setHabitsFinished] = useState(0);
 
   return (
-    <Usuario.Provider value={[usuario, setUsuario]}>
-      <HabitsFinished.Provider value={[habitsFinished, setHabitsFinished]}>
+    <Usuario.Provider value={{usuario, setUsuario }}>
+      {/*<HabitsFinished.Provider value={[habitsFinished, setHabitsFinished]}>*/}
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Login />} />
@@ -24,7 +24,7 @@ export default function App() {
             <Route path="/historico" element={<History />} />
           </Routes>
         </BrowserRouter>
-      </HabitsFinished.Provider>
+      {/*</HabitsFinished.Provider>*/}
     </Usuario.Provider>
 
   )

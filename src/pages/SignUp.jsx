@@ -40,7 +40,7 @@ export default function SignUp() {
           <>
             <SCButton
               disabled={loading} 
-              data-test="singup-btn" 
+              data-test="signup-btn" 
               type="submit"
             >
               <BeatLoader loading={loading} color={'#FFFFFF'} />
@@ -52,7 +52,7 @@ export default function SignUp() {
           <>
             <SCButton
               disabled={loading} 
-              data-test="singup-btn" 
+              data-test="signup-btn" 
               type="submit"
             >
               Cadastrar
