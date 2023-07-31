@@ -2,12 +2,11 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { SCMenu, SCProgressBar, SCPRotas } from "../styled-components/StyleMenu";
 import { Link } from "react-router-dom";
-//import { HabitsFinished } from "../resources/context";
 import { useContext } from "react";
 
 export default function Menu(){
 
-    //const [habitsFinished, setHabitsFinished] = useContext(HabitsFinished);
+   
 
     return(
         <SCMenu data-test="menu">

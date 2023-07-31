@@ -22,8 +22,7 @@ export default function Login() {
     
       axios.post(`https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth/login`, { email, password })
         .then(res => {
-          setUser(res.data);
-          console.log(user);
+          setUser(res.data.token);
           navigate('/hoje');
         })
         .catch(error => {
